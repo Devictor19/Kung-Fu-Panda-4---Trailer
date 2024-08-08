@@ -32,10 +32,10 @@ main {
     font-weight: 600;
     text-align: center;
     text-transform: uppercase;
-    letter-spacing: 0.3px;
+    letter-spacing: 3px;
     border: 1px solid var(--yellow);
     box-shadow: 5px 5px 5px var(--yellow);
-
+    font-family: 'Kungfont', sans-serif;
     transform: translateY(-5px);
     
 }
@@ -44,11 +44,10 @@ main {
     background: transparent;
 }
 
-
 .global__info div a:hover{
     opacity: 1;
     border: 1px solid var(--green);
-    box-shadow: 5px 5px 5px #fff;
+    box-shadow: 5px 5px 5px #01fd23;
     transform: translateY(-5px);
     transform: skew(-10deg);
     cursor: pointer;

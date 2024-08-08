@@ -1,7 +1,7 @@
 header {
     display: flex;
     align-items: center;
-    column-gap: 64px;
+    column-gap: 50px;
 
     width: 100%;
     max-width: 1440px;
@@ -17,20 +17,20 @@ header img {
     display: flex;
     align-items: center;
     list-style: none;
-    column-gap: 48px;
+    column-gap: 25px;
 }
 
 .navigation__link {
-    font-size: 14px;
+    font-size: 18px;
     font-weight: 300;
-    letter-spacing: 2px;
+    letter-spacing: 3px;
     text-transform: uppercase;
-
+    font-family: 'Kungfont', sans-serif;
     position: relative;
 }
 
 .navigation__link:hover {
-    color: var(--red);
+    color: var(--yellow);
 }
 
 .navigation__link::after {
@@ -41,7 +41,7 @@ header img {
 
     width: 60%;
     height: 1px;
-    background: var(--red);
+    background: var(--green);
 
     transform: scaleX(0);
     transform-origin: right;
@@ -63,7 +63,7 @@ header img {
 }
 
 .navigation__social svg{
-    width: 20px;
+    width: 30px;
     height: 20px;
     opacity: 0.6;
 
