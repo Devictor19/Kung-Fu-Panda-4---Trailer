@@ -37,7 +37,6 @@ main {
     box-shadow: 5px 5px 5px var(--yellow);
     font-family: 'Kungfont', sans-serif;
     transform: translateY(-5px);
-    
 }
 
 .global__info div a {
