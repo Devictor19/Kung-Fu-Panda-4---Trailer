@@ -1,0 +1,12 @@
+.audio-container{
+    width: 100%;
+    height: fit-content;
+    opacity: 0.2;
+}
+
+.audio-container:hover{
+    opacity: 1;
+    transform: translateY(-5px);
+    transition: all 0.4s;
+}
+

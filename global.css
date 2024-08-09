@@ -51,7 +51,6 @@ main {
     transform: translateY(-5px);
     transform: skew(-10deg);
     cursor: pointer;
-
     transition: transform 0.3s;
 }
 
@@ -64,7 +63,7 @@ main {
     bottom: 0;
     width: 100%;
     padding: 10px 0;
-    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1); /* Adiciona uma leve sombra para destacar o rodapé */
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
 }
 
 .global__footer img {

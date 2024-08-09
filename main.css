@@ -1,7 +1,7 @@
 @import url('./background.css');
 @import url('./header.css');
 @import url('./global.css');
-
+@import url('./styleaudio.css');
 @font-face {
     font-family: 'Kungfont';
     src: url('./FONTE/Kungfont.ttf.ttf') format('truetype');
