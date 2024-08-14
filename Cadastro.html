@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário de Cadastro</title>
+    <link rel="icon" type="image/x-icon" href="./IMAGENS/icon_panda_danadinho.png">
+    <link rel="stylesheet" href="./main.css">
+    <link rel="stylesheet" href="./cadastro.css">
+    <link rel="stylesheet" href="./background.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+</head>
+<div id="background">
+    <video loop autoplay muted>
+        <source src="./VIDEO/Kung-Fu-Panda-4-Trailer.mp4" type="video/mp4"> 
+    </video>
+</div>
+
+<div>
+<body class="form_geral">
+    <div data-aos="fade-up"
+    data-aos-duration="500"
+    data-aos-easing="ease-in-out"
+    src="./IMAGENS/logo_filme_kung_fu_panda_4_2.png"
+    width="550px">
+    <h1 id="titulo">Formulário de Cadastro</h1>
+    <p id="subtitulo">Complete suas informações</p>
+    </div>
+
+    <form action="" >
+        <fieldset 
+        data-aos="fade-up"
+                data-aos-duration="600"
+                data-aos-easing="ease-in-out"
+                src="./IMAGENS/logo_filme_kung_fu_panda_4_2.png"
+                width="550px" 
+        class="_nomes">
+            <p><label for="iNome"></label>
+                <input type="Nome" placeholder="Nome" id="iNome" required>
+            </p>
+
+            <p><label for="iSobrenome"></label>
+                <input type="Sobrenome" placeholder="Sobrenome" id="iSobrenome" required>
+            </p>
+        </fieldset>
+
+        <div 
+                data-aos="fade-up"
+                data-aos-duration="700"
+                data-aos-easing="ease-in-out"
+                src="./IMAGENS/logo_filme_kung_fu_panda_4_2.png"
+                width="550px" 
+
+        class="_email">
+            <E-mail><label for="iE-mail"></label>
+                <input type="email" placeholder="E-mail" id="iE-mail" required>
+            </E-mail>
+
+            <p><label for="iCelular"></label>
+                <input type="Celular" placeholder="Celular" id="iCelular">
+            </p><br>
+        </div>
+
+        <div 
+        data-aos="fade-up"
+                data-aos-duration="800"
+                data-aos-easing="ease-in-out"
+                src="./IMAGENS/logo_filme_kung_fu_panda_4_2.png"
+                width="550px" 
+
+        class="_checkbox">
+            <label class="checkbox-title">Selecione os filmes que já assistiu:</label>
+            <div class="checkbox-group">
+                <label>
+                    <input type="checkbox" id="iFilme" name="Filme" value="Kung_Fu_Panda">
+                    Kung Fu Panda
+                </label>
+                <label>
+                    <input type="checkbox" id="iFilme2" name="Filme2" value="Kung_Fu_Panda_2">
+                    Kung Fu Panda 2
+                </label>
+                <label>
+                    <input type="checkbox" id="iFilme3" name="Filme3" value="Kung_Fu_Panda_3">
+                    Kung Fu Panda 3
+                </label>
+            </div>
+        </div>
+
+        <div>
+            <fieldset 
+            
+            data-aos="fade-up"
+                data-aos-duration="900"
+                data-aos-easing="ease-in-out"
+                src="./IMAGENS/logo_filme_kung_fu_panda_4_2.png"
+                width="550px" 
+
+            class="_radio">
+            <label>Irá assitir na estreia?</label>
+            <div class="_radio_op">
+                <label>
+                    <input type="radio" name="estreia" value="iSim" checked>Sim
+                </label>
+                <label>
+                    <input type="radio" name="estreia" value="iNao">Não
+                </label>
+            </div>
+            </fieldset>
+        </div>
+
+        <div 
+        data-aos="fade-up"
+                data-aos-duration="1000"
+                data-aos-easing="ease-in-out"
+                src="./IMAGENS/logo_filme_kung_fu_panda_4_2.png"
+                width="550px" 
+        
+        class="_coment">
+            <br>
+            <label>Conte suas expectátiva para o Kung Fu Panda 4!</label>
+            <textarea row="10" style="width: 30em" name="experiencia" id="iExperiencia"></textarea>
+        </div>
+
+        <button 
+        data-aos="fade-up"
+                data-aos-duration="1100"
+                data-aos-easing="ease-in-out"
+                src="./IMAGENS/logo_filme_kung_fu_panda_4_2.png"
+                width="550px" 
+        class="button" type="submit">Pronto</button>
+    </form>
+    <div>    
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+        <script>
+            AOS.init();
+        </script>
+        </div>
+</body>
+</html>
