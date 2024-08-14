@@ -16,6 +16,78 @@
     font-size: 1.5em;
 }
 
+/* Estilos para telas menores que 768px (tablets e celulares) */
+@media (max-width: 768px) {
+    #titulo {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family: 'Kungfont', sans-serif;
+        color: var(--yellow);
+        font-size: 2em;
+    }
+    
+    #subtitulo {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family: 'Kungfont', sans-serif;
+        color: var(--green);
+        font-size: 1.5em;
+    }
+    .form_geral {
+        flex-direction: column;
+        padding: 20px;
+        width: 100%;
+        margin-top: 0;
+    }
+
+    ._nomes, ._email, ._checkbox, ._radio, ._coment {
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    input[type="Nome"], input[type="Sobrenome"], input[type="email"], input[type="Celular"], textarea {
+        width: 100%; /* Preencher toda a largura disponível */
+    }
+
+    .checkbox-group {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px; /* Reduzir o espaço entre os itens */
+    }
+
+    ._radio_op {
+        flex-direction: column;
+        gap: 10px; /* Reduzir o espaço entre os itens */
+    }
+
+    .button {
+        width: 100%; /* Preencher toda a largura disponível */
+    }
+}
+
+/* Estilos para telas menores que 480px (celulares) */
+@media (max-width: 480px) {
+    #titulo {
+        font-size: 2em;
+    }
+
+    #subtitulo {
+        font-size: 1em;
+    }
+
+    .checkbox-title, ._radio, ._coment label {
+        font-size: 1em;
+    }
+
+    input[type="Nome"], input[type="Sobrenome"], input[type="email"], input[type="Celular"], textarea {
+        font-size: 1em;
+    }
+}
+
+
 fieldset {
     border: 0;
 }
@@ -129,6 +201,7 @@ textarea {
 }
 
 
+/* Botão básico */
 .button {
     width: 100%;
     padding: 10px 0;
@@ -142,19 +215,25 @@ textarea {
     border: 1px solid var(--yellow);
     box-shadow: 5px 5px 5px var(--yellow);
     font-family: 'Kungfont', sans-serif;
-    transform: translateY(-5px);
-}
-
-.button {
     background: transparent;
+    position: relative;
+    z-index: 1; /* Garante que o botão fique acima de outros elementos */
 }
 
+/* Efeito de hover */
 .button:hover {
     color: var(--green);
     border: 1px solid var(--green);
     box-shadow: 5px 5px 5px #01fd23;
-    transform: translateY(-5px);
-    transform: skew(-10deg);
+    transform: skew(-10deg); /* Inclinação aplicada apenas no hover */
     cursor: pointer;
-    transition: transform 0.3s;
+    transition: transform 0.3s, color 0.3s, border-color 0.3s, box-shadow 0.3s;
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 768px) {
+    .button {
+        transform: none; /* Remove qualquer transformação para garantir que o botão fique visível */
+        margin-top: 10px;
+    }
 }

@@ -1,12 +1,398 @@
-.audio-container{
-    width: 100%;
-    height: fit-content;
-    opacity: 0.2;
+/* Importações */
+@font-face {
+    font-family: 'Kungfont';
+    src: url('./FONTE/Kungfont.ttf.ttf') format('truetype');
 }
 
-.audio-container:hover{
-    opacity: 1;
-    transform: translateY(-5px);
+:root {
+    --text: #EDF1F7;
+    --red: #C51212;
+    --blue: #0041C2;
+    --green: #14B02D;
+    --yellow: #ffc12b;
+}
+
+/* Estilos Globais */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: auto;
+    overflow-x: hidden;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: var(--text);
+}
+
+body, button, a {
+    color: var(--text);
+    font-family: Arial, sans-serif;
+    font-weight: 400;
+}
+
+a {
+    text-decoration: none;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+/* Fundo */
+#background {
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+}
+
+#background video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#background::after {
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    inset: 0;
+    background: linear-gradient(109deg, rgba(10, 12, 16, 0.99) 15%, rgba(10, 12, 16, 0.7) 50%, rgba(10, 12, 16, 0.99) 85%);
+    pointer-events: none;
+}
+
+/* Container principal da página */
+#app {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    min-height: 100vh;
+    overflow: center;
+    padding: 15px;
+}
+
+/* Cabeçalho */
+header {
+    display: flex;
+    align-items: center;
+    column-gap: 50px;
+    width: 100%;
+    max-width: 1440px;
+    padding-top: 24px;
+    margin: 0 auto; /* Centraliza o header horizontalmente */
+}
+
+header img {
+    width: 100px;
+    height: auto;
+}
+
+.navigation {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    column-gap: 25px;
+}
+
+.navigation__link {
+    font-size: 18px;
+    font-weight: 300;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    font-family: 'Kungfont', sans-serif;
+    position: relative;
+}
+
+.navigation__link:hover {
+    color: var(--yellow);
+}
+
+.navigation__link::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    width: 60%;
+    height: 1px;
+    background: var(--green);
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.4s;
+}
+
+.navigation__link:hover::after {
+    transform: scaleX(1);
+    transform-origin: left;
+    transition: transform 0.4s;
+}
+
+.navigation__social {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    column-gap: 24px;
+}
+
+.navigation__social svg {
+    width: 30px;
+    height: 20px;
+    opacity: 0.6;
     transition: all 0.4s;
 }
 
+.navigation__social svg:hover {
+    opacity: 1;
+    transform: translateY(-5px);
+    cursor: pointer;
+}
+
+/* Informações Globais */
+.global__info {
+    margin-top: 20px;
+    width: 100%;
+    max-width: 570px;
+    margin: 0px 120px;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.global__info p {
+    font-family: sans-serif;
+    font-size: 20px; 
+    color: #fff; 
+    text-align: justify;
+    margin-bottom: 20px;
+}
+
+.global__info div {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.global__info div a {
+    width: 100%;
+    padding: 10px 0;
+    border-radius: 3px;
+    font-size: 16px;
+    font-weight: 600;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    border: 1px solid var(--yellow);
+    box-shadow: 5px 5px 5px var(--yellow);
+    font-family: 'Kungfont', sans-serif;
+    background: transparent;
+    transform: translateY(-5px);
+    transition: transform 0.3s;
+}
+
+.global__info div a:hover {
+    color: var(--yellow);
+    opacity: 1;
+    border: 1px solid var(--green);
+    box-shadow: 5px 5px 5px #01fd23;
+    transform: translateY(-5px) skew(-10deg);
+    cursor: pointer;
+}
+
+/* Rodapé */
+.global__footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    padding: 10px 0;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.global__footer img {
+    width: 70px;
+    border: 0;
+}
+
+.button_cadastro {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    padding: 30px 0;
+    border-radius: 2px;
+}
+
+/* Estilos da Caixa de Áudio */
+.audio-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.audio-container audio {
+    width: 100%;
+    border-radius: 5px;
+    color: var(--text);
+}
+
+.audio-container .audio-controls {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.audio-container .audio-controls button:hover {
+    background: var(--yellow);
+    color: var(--blue);
+}
+
+/* Responsividade */
+@media (max-width: 1366px) {
+    header {
+        flex-direction: column;
+        align-items: center;
+        padding: 10px;
+    }
+
+    .navigation {
+        flex-direction: column;
+        row-gap: 10px;
+        column-gap: 0;
+        margin-top: 10px;
+    }
+
+    .navigation__link {
+        font-size: 16px;
+    }
+
+    .navigation__social {
+        margin-left: 0;
+        margin-top: 10px;
+    }
+
+    .navigation__social svg {
+        width: 25px;
+        height: 15px;
+    }
+}
+
+@media (max-width: 768px) {
+    main {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 7px;
+    }
+
+    .global__info p {
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        font-size: 18px;
+    }
+
+    .global__info div {
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        row-gap: 20px;
+        column-gap: 0;
+    }
+
+    .global__info div a {
+        font-size: 14px;
+        padding: 8px 0;
+    }
+
+    .global__footer {
+        padding: 15px 0;
+    }
+
+    header {
+        flex-direction: column;
+        align-items: center;
+        padding-top: 10px;
+    }
+
+    .navigation {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .navigation__social {
+        margin-left: 0;
+        justify-content: center;
+        margin-top: 10px;
+    }
+
+    .audio-container {
+        padding: 10px;
+    }
+
+    .audio-container .audio-controls {
+        flex-direction: column;
+    }
+
+    .audio-container .audio-controls button {
+        margin: 5px 0;
+        font-size: 14px;
+        padding: 8px;
+    }
+}
+
+@media (max-width: 480px) {
+    .global__info p {
+        font-size: 16px;
+    }
+
+    .global__info div a {
+        font-size: 12px;
+        padding: 6px 0;
+    }
+
+    .global__footer img {
+        width: 50px;
+    }
+
+    header {
+        padding: 12px;
+    }
+
+    .navigation {
+        flex-direction: column;
+        row-gap: 8px;
+        column-gap: 0;
+        margin-top: 8px;
+    }
+
+    .navigation__link {
+        font-size: 14px;
+    }
+
+    .navigation__social svg {
+        width: 20px;
+        height: 12px;
+    }
+
+    .audio-container audio {
+        width: 100%;
+        font-size: 14px;
+    }
+
+    .audio-container .audio-controls button {
+        font-size: 12px;
+        padding: 6px;
+    }
+}

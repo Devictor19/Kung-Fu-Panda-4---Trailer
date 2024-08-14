@@ -1,3 +1,4 @@
+/* Estilos do Header */
 header {
     display: flex;
     align-items: center;
@@ -5,6 +6,7 @@ header {
     width: 100%;
     max-width: 1440px;
     padding-top: 24px;
+    margin: 0 auto; /* Centraliza o header horizontalmente */
 }
 
 header img {
@@ -58,15 +60,67 @@ header img {
     column-gap: 24px;
 }
 
-.navigation__social svg{
+.navigation__social svg {
     width: 30px;
     height: 20px;
     opacity: 0.6;
     transition: all 0.4s;
 }
 
-.navigation__social svg:hover{
+.navigation__social svg:hover {
     opacity: 1;
     transform: translateY(-5px);
     cursor: pointer;
+}
+
+/* Media Queries para responsividade */
+@media (max-width: 1366px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 16px;
+    }
+
+    .navigation {
+        flex-direction: column;
+        row-gap: 10px;
+        column-gap: 0;
+        margin-top: 10px;
+    }
+
+    .navigation__link {
+        font-size: 16px;
+    }
+
+    .navigation__social {
+        margin-left: 0;
+        margin-top: 10px;
+    }
+
+    .navigation__social svg {
+        width: 25px;
+        height: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    header {
+        padding: 12px;
+    }
+
+    .navigation {
+        flex-direction: column;
+        row-gap: 8px;
+        column-gap: 0;
+        margin-top: 8px;
+    }
+
+    .navigation__link {
+        font-size: 14px;
+    }
+
+    .navigation__social svg {
+        width: 20px;
+        height: 12px;
+    }
 }
