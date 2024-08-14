@@ -1,0 +1,160 @@
+#titulo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Kungfont', sans-serif;
+    color: var(--yellow);
+    font-size: 3em;
+}
+
+#subtitulo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Kungfont', sans-serif;
+    color: var(--green);
+    font-size: 1.5em;
+}
+
+fieldset {
+    border: 0;
+}
+
+.form_geral {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family:'Kungfont', sans-serif;
+    font-size: 1em;
+    margin-top: 5%;
+    width: 100%;
+}
+
+._nomes {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 30px;
+    margin-left: 0%;
+}
+
+._email {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 30px;
+    margin-left: 0%;
+}
+
+input[type="Nome"], input[type="Sobrenome"], input[type="email"], input[type="Celular"] {
+    width: 100%; /* Para preencher a largura disponível */
+    padding: 0.5em; /* Espaçamento interno */
+    font-size: 1em; /* Tamanho da fonte */
+    box-sizing: border-box; /* Inclui padding e borda no cálculo da largura */
+}
+
+._email {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+label {
+    display: block;
+    margin-bottom: 0.5em;
+}
+
+._nomes input, ._email input {
+    margin-bottom: 1em; /* Espaço entre os inputs */
+}
+
+.checkbox-title {
+    color: var(--green);
+    display: block;
+    text-align: center;
+    font-size: 1.5em;
+    margin-bottom: 10px; /* Espaçamento inferior para o título */
+    }
+
+.checkbox-group {
+    display: flex;
+    justify-content: center; /* Centraliza o grupo de checkboxes */
+    gap: 20px; /* Espaço entre cada checkbox e rótulo */
+}
+
+.checkbox-group label {
+    display: flex;
+    align-items: center; /* Alinha checkbox com o texto */
+    font-size: 1.2em;
+}
+
+._radio {
+    margin-top: 15px;
+    color: var(--yellow);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    font-size: 1.5em;
+}
+
+._radio_op {
+    color: aliceblue;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    gap: 20px; /* Espaço entre cada checkbox e rótulo */
+}
+
+._coment{
+    font-size: 1.2em;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+}
+
+._coment label{
+    display: grid;
+    align-items: center;
+    justify-content: center;
+}
+
+textarea {
+    width: 100%; /* Preencher toda a largura disponível */
+    padding: 0.5em; /* Espaçamento interno */
+    font-size: 1.2em; /* Tamanho da fonte */
+    box-sizing: border-box; /* Inclui padding e borda no cálculo da largura */
+}
+
+
+.button {
+    width: 100%;
+    padding: 10px 0;
+    border-radius: 3px;
+    margin-top: 20px;
+    font-size: 16px;
+    font-weight: 600;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    border: 1px solid var(--yellow);
+    box-shadow: 5px 5px 5px var(--yellow);
+    font-family: 'Kungfont', sans-serif;
+    transform: translateY(-5px);
+}
+
+.button {
+    background: transparent;
+}
+
+.button:hover {
+    color: var(--green);
+    border: 1px solid var(--green);
+    box-shadow: 5px 5px 5px #01fd23;
+    transform: translateY(-5px);
+    transform: skew(-10deg);
+    cursor: pointer;
+    transition: transform 0.3s;
+}

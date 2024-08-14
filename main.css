@@ -2,6 +2,7 @@
 @import url('./header.css');
 @import url('./global.css');
 @import url('./styleaudio.css');
+@import url('./cadastro.css');
 @font-face {
     font-family: 'Kungfont';
     src: url('./FONTE/Kungfont.ttf.ttf') format('truetype');
